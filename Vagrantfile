@@ -102,7 +102,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # host name, this will fail.
         vb.customize ['modifyvm', :id, '--groups', PROJECT_NAME]
       end
-            
+      
+      
+
+      config.vm.provision "file", source: "./files/App", destination: "$HOME/"
+
+      config.vm.provision "docker" do |d|    
+        d.build_image "-t counter-image " "/home/vagrant/App" 
+        
+      end
+
       # Run configuration script for the VM
       node.vm.provision 'shell', path: 'provisioning/' + host['name'] + '.sh'
     end

@@ -35,5 +35,8 @@ source ${PROVISIONING_SCRIPTS}/common.sh
 
 log "Starting server specific provisioning tasks on ${HOSTNAME}"
 
-# TODO: insert code here, e.g. install Apache, add users (see the provided
-# functions in utils.sh), etc.
+log "Creating docker container"
+docker create --rm --name core-counter counter-image
+
+log "Starting docker config"
+docker start core-counter

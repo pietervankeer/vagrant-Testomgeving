@@ -1,0 +1,16 @@
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.exe
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.deps.json
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.runtimeconfig.json
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.runtimeconfig.dev.json
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.dll
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\ref\NetCore.Docker.dll
+E:\Documents\personalProjects\docker dotnetapp\app\bin\Release\net5.0\NetCore.Docker.pdb
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.csproj.AssemblyReference.cache
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.AssemblyInfoInputs.cache
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.AssemblyInfo.cs
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.csproj.CoreCompileInputs.cache
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.dll
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\ref\NetCore.Docker.dll
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.pdb
+E:\Documents\personalProjects\docker dotnetapp\app\obj\Release\net5.0\NetCore.Docker.genruntimeconfig.cache
