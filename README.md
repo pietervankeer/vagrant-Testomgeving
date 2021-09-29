@@ -1,10 +1,7 @@
-# Vagrant environment with shell provisioning
+# Vagrant Testomgeving
 
-Scaffolding code for a multi-VM Vagrant environment with shell provisioning. It is based on my reusable "[One Vagrantfile to rule them all](https://bertvv.github.io/notes-to-self/2015/10/05/one-vagrantfile-to-rule-them-all/)" (I gave a [lightning talk about this](https://youtu.be/qJ0VNO6z68M) at [Config Management Camp 2016 Ghent](http://cfgmgmtcamp.eu/) - [slides here](http://www.slideshare.net/bertvanvreckem/one-vagrantfile-to-rule-them-all)). Hosts are defined in a simple Yaml format (see below), so setting up a multi-VM environment becomes almost trivial.
+Applicatie plaatsen in [files](files/)
 
-For a more advanced Vagrant setup with Ansible provisioning, see this project's big brother, [ansible-skeleton](https://github.com/bertvv/ansible-skeleton).
-
-If you like/use this project, please consider giving it a star. Thanks!
 
 ## Getting started
 
