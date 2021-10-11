@@ -14,7 +14,7 @@ require 'yaml'
 ENV["LC_ALL"] = "en_US.UTF-8"
 
 # Set your default base box here
-DEFAULT_BASE_BOX = 'bento/centos-8'
+DEFAULT_BASE_BOX = 'bento/ubuntu-20.04'
 
 #
 # No changes needed below this point
@@ -101,15 +101,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # WARNING: if the name of the current directory is the same as the
         # host name, this will fail.
         vb.customize ['modifyvm', :id, '--groups', PROJECT_NAME]
-      end
-      
-      
-
-      config.vm.provision "file", source: "./files/App", destination: "$HOME/"
-
-      config.vm.provision "docker" do |d|    
-        d.build_image "-t counter-image " "/home/vagrant/App" 
-        
       end
 
       # Run configuration script for the VM
