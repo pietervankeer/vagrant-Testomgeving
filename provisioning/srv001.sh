@@ -36,8 +36,43 @@ source ${PROVISIONING_SCRIPTS}/common.sh
 log "Starting server specific provisioning tasks on ${HOSTNAME}"
 
 
-Log "Cloning github"
 cd /home/vagrant
+if [ -d "/home/vagrant/cicd-sample-app" ] 
+then
+    rm -r /home/vagrant/cicd-sample-app
+fi
+log "Cloning application from Github"
 git clone https://github.com/pietervankeer/cicd-sample-app.git
 cd cicd-sample-app
-./sample-app.sh
+chmod +x sample-app.sh
+
+
+log "installing docker"
+apt-get update
+
+# set up repo
+
+apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+# add docker official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# stable repo
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Install docker engine
+apt-get update 
+apt-get -y install docker-ce docker-ce-cli containerd.io
+
+# build app
+/home/vagrant/cicd-sample-app/sample-app.sh
+
+log "pull mongodb from dockerhub"
+docker pull mongo
