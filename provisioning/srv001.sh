@@ -35,8 +35,9 @@ source ${PROVISIONING_SCRIPTS}/common.sh
 
 log "Starting server specific provisioning tasks on ${HOSTNAME}"
 
-log "Creating docker container"
-docker create --rm --name core-counter counter-image
 
-log "Starting docker config"
-docker start core-counter
+Log "Cloning github"
+cd /home/vagrant
+git clone https://github.com/pietervankeer/cicd-sample-app.git
+cd cicd-sample-app
+./sample-app.sh
